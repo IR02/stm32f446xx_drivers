@@ -62,7 +62,7 @@ void GPIO_WriteToOutputPort(void);
 void GPIO_ToggleOutputPin(void);
 
 /*
- * IRQ confirgation and ISR handling
+ * IRQ configuration and ISR handling
  */
 void GPIO_IRQConfig(void);
 void GPIO_IRQHandling(void);
