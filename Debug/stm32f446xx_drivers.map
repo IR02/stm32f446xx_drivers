@@ -61,14 +61,37 @@ Discarded input sections
  .group         0x00000000        0xc ./Drivers/Src/stm32f446xx_gpio_driver.o
  .group         0x00000000        0xc ./Drivers/Src/stm32f446xx_gpio_driver.o
  .group         0x00000000        0xc ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .group         0x00000000        0xc ./Drivers/Src/stm32f446xx_gpio_driver.o
  .text          0x00000000        0x0 ./Drivers/Src/stm32f446xx_gpio_driver.o
  .data          0x00000000        0x0 ./Drivers/Src/stm32f446xx_gpio_driver.o
  .bss           0x00000000        0x0 ./Drivers/Src/stm32f446xx_gpio_driver.o
- .debug_info    0x00000000       0x69 ./Drivers/Src/stm32f446xx_gpio_driver.o
- .debug_abbrev  0x00000000       0x28 ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .text.GPIO_PeriClockControl
+                0x00000000      0x1a0 ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .text.GPIO_Init
+                0x00000000      0x18c ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .text.GPIO_DeInt
+                0x00000000      0x144 ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .text.GPIO_ReadFromInputPin
+                0x00000000       0x2a ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .text.GPIO_ReadFromInputPort
+                0x00000000       0x1c ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .text.Gpio_WriteToOutputPin
+                0x00000000       0x48 ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .text.GPIO_WriteToOutputPort
+                0x00000000       0x1c ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .text.GPIO_ToggleOutputPin
+                0x00000000       0x28 ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .text.GPIO_IRQConfig
+                0x00000000       0x1c ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .text.GPIO_IRQHandling
+                0x00000000       0x14 ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .debug_info    0x00000000      0x61c ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .debug_abbrev  0x00000000      0x113 ./Drivers/Src/stm32f446xx_gpio_driver.o
  .debug_aranges
-                0x00000000       0x18 ./Drivers/Src/stm32f446xx_gpio_driver.o
- .debug_macro   0x00000000       0x7c ./Drivers/Src/stm32f446xx_gpio_driver.o
+                0x00000000       0x68 ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .debug_rnglists
+                0x00000000       0x4c ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .debug_macro   0x00000000       0x81 ./Drivers/Src/stm32f446xx_gpio_driver.o
  .debug_macro   0x00000000      0xab4 ./Drivers/Src/stm32f446xx_gpio_driver.o
  .debug_macro   0x00000000       0x22 ./Drivers/Src/stm32f446xx_gpio_driver.o
  .debug_macro   0x00000000       0x8e ./Drivers/Src/stm32f446xx_gpio_driver.o
@@ -76,10 +99,12 @@ Discarded input sections
  .debug_macro   0x00000000      0x103 ./Drivers/Src/stm32f446xx_gpio_driver.o
  .debug_macro   0x00000000       0x6a ./Drivers/Src/stm32f446xx_gpio_driver.o
  .debug_macro   0x00000000      0x1df ./Drivers/Src/stm32f446xx_gpio_driver.o
- .debug_macro   0x00000000      0x273 ./Drivers/Src/stm32f446xx_gpio_driver.o
- .debug_line    0x00000000      0x40a ./Drivers/Src/stm32f446xx_gpio_driver.o
- .debug_str     0x00000000     0x4c41 ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .debug_macro   0x00000000      0x2ab ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .debug_macro   0x00000000       0xc4 ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .debug_line    0x00000000      0x750 ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .debug_str     0x00000000     0x5486 ./Drivers/Src/stm32f446xx_gpio_driver.o
  .comment       0x00000000       0x44 ./Drivers/Src/stm32f446xx_gpio_driver.o
+ .debug_frame   0x00000000      0x1a0 ./Drivers/Src/stm32f446xx_gpio_driver.o
  .ARM.attributes
                 0x00000000       0x2e ./Drivers/Src/stm32f446xx_gpio_driver.o
  .group         0x00000000        0xc ./Src/main.o
@@ -100,7 +125,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x103 ./Src/main.o
  .debug_macro   0x00000000       0x6a ./Src/main.o
  .debug_macro   0x00000000      0x1df ./Src/main.o
- .debug_macro   0x00000000      0x273 ./Src/main.o
+ .debug_macro   0x00000000      0x2ab ./Src/main.o
  .group         0x00000000        0xc ./Src/syscalls.o
  .group         0x00000000        0xc ./Src/syscalls.o
  .group         0x00000000        0xc ./Src/syscalls.o
@@ -854,10 +879,10 @@ LOAD /mnt/myssd/Programs/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mcu
  .debug_line    0x00000000      0x3e7 ./Src/main.o
  .debug_line    0x000003e7       0x7b ./Startup/startup_stm32f446retx.o
 
-.debug_str      0x00000000     0x4aef
- .debug_str     0x00000000     0x4ab0 ./Src/main.o
-                               0x4c0b (size before relaxing)
- .debug_str     0x00004ab0       0x3f ./Startup/startup_stm32f446retx.o
+.debug_str      0x00000000     0x4dc6
+ .debug_str     0x00000000     0x4d87 ./Src/main.o
+                               0x4ee2 (size before relaxing)
+ .debug_str     0x00004d87       0x3f ./Startup/startup_stm32f446retx.o
                                  0x84 (size before relaxing)
 
 .comment        0x00000000       0x43
